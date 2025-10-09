@@ -1,73 +1,193 @@
-# Phising Checkers
+# Abhinav Singh - Cybersecurity Portfolio
 
-A lightweight, single-page tool to evaluate URLs and content for common phishing indicators. Built as a static site (pure HTML/CSS/JS) for fast, zero-backend deployment.
+A modern, interactive portfolio website for Abhinav Singh, a cybersecurity student and aspiring ethical hacker. Built with Next.js, Tailwind CSS, and Framer Motion for a sleek, hacker-inspired design.
 
-> Note: Repository/folder name uses "Phising"; you may prefer "Phishing" in public docs.
+## 🚀 Live Demo
 
-## Features
-- Visual, friendly UI for quick checks
-- Heuristics for suspicious patterns (domains, shortening, mixed chars)
-- Mobile-responsive layout
-- Zero dependencies; deploy anywhere
+[View Portfolio](https://your-portfolio-url.com)
 
-## Demo
-- Add a live link here once deployed: <your-demo-url>
+## ✨ Features
 
-## Project Structure
+- **Dark, Hacker-Inspired Theme**: Neon blue/green accents with cyber aesthetics
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Smooth Animations**: Framer Motion powered transitions and micro-interactions
+- **Interactive Components**: Hover effects, typing animations, and matrix background
+- **Multi-Page Structure**: Comprehensive sections covering all aspects of the portfolio
+- **Modern Tech Stack**: Next.js 14, TypeScript, Tailwind CSS
+
+## 📱 Pages
+
+- **Home**: Hero section with typing animation and terminal-style interface
+- **About**: Bio, skills, and education timeline with animated progress bars
+- **Experience**: Professional experience with detailed internship information
+- **Projects**: Interactive project cards with modal details and GitHub links
+- **Certificates**: Grid layout with lightbox preview for certifications
+- **Events**: Timeline of workshops, competitions, and cybersecurity events
+- **Studies**: Learning journey, coursework, and current learning goals
+- **Contact**: Contact form with animated icons and availability information
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS with custom dark theme
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Language**: TypeScript
+- **Deployment**: Ready for Vercel, Netlify, or GitHub Pages
+
+## 🎨 Design Features
+
+- **Matrix Background**: Animated falling code effect
+- **Neon Glows**: Subtle glowing effects on hover and focus
+- **Glassmorphism**: Modern glass-like components
+- **Terminal Aesthetics**: Command-line inspired elements
+- **Smooth Scrolling**: Enhanced user experience
+- **Custom Animations**: Typing effects, progress bars, and transitions
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/abhinav-singh-portfolio.git
+cd abhinav-singh-portfolio
 ```
-phising checkers/
-├─ index.html
-└─ vercel.json
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
 ```
 
-## Getting Started (Local)
-- Option 1: Open `phising checkers/index.html` directly in your browser.
-- Option 2: Serve locally (recommended for CORS-safe testing):
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
 
 ```bash
-# Python 3
-python -m http.server 8080
-
-# Node
-npx serve -l 8080
+npm run build
+npm start
 ```
-Then visit http://localhost:8080
 
-## Deploy
+## 📁 Project Structure
 
-### GitHub Pages
-1. Create a repo and push this folder.
-2. In GitHub: Settings → Pages → Deploy from branch → `main`/`docs` as needed.
-3. If using a subfolder, move files to repo root or configure Pages to serve from `/` or `/docs`.
+```
+├── app/                    # Next.js App Router pages
+│   ├── about/             # About page
+│   ├── experience/        # Experience page
+│   ├── projects/          # Projects page
+│   ├── certificates/      # Certificates page
+│   ├── events/            # Events page
+│   ├── studies/           # Studies page
+│   ├── contact/           # Contact page
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # Reusable components
+│   ├── Navbar.tsx         # Navigation component
+│   ├── Footer.tsx         # Footer component
+│   ├── MatrixBackground.tsx # Animated background
+│   ├── TypingAnimation.tsx # Typing effect component
+│   ├── ProjectCard.tsx    # Project card component
+│   └── CertificateCard.tsx # Certificate card component
+├── public/                # Static assets
+└── README.md              # This file
+```
 
-### Vercel
-- This project includes `vercel.json`. Steps:
-  1. Install Vercel CLI: `npm i -g vercel`
-  2. Run: `vercel` → follow prompts
-  3. For production: `vercel --prod`
+## 🎯 Key Components
+
+### MatrixBackground
+Animated falling code effect using HTML5 Canvas for authentic hacker aesthetic.
+
+### TypingAnimation
+Custom typing effect component for dynamic text display.
+
+### ProjectCard
+Interactive project cards with modal details and hover effects.
+
+### CertificateCard
+Certificate display with lightbox functionality and verification links.
+
+## 🎨 Customization
+
+### Colors
+The theme uses custom CSS variables defined in `tailwind.config.js`:
+- `neon-blue`: #00f5ff
+- `neon-green`: #39ff14
+- `cyber-dark`: #0a0a0a
+- `cyber-gray`: #1a1a1a
+
+### Content
+Update the following files to customize content:
+- `app/page.tsx` - Home page content
+- `app/about/page.tsx` - About section
+- `app/projects/page.tsx` - Projects data
+- `app/certificates/page.tsx` - Certificates data
+- `app/contact/page.tsx` - Contact information
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy automatically
 
 ### Netlify
-- Drag-and-drop the folder in the Netlify UI or use `ntl deploy`.
+1. Build the project: `npm run build`
+2. Upload the `out` folder to Netlify
+3. Configure build settings if needed
 
-## How to Publish to GitHub
-```powershell
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
+### GitHub Pages
+1. Update `next.config.js` for static export
+2. Build and deploy to GitHub Pages
 
-## Customize
-- Update titles, copy, and SEO tags inside `phising checkers/index.html`.
-- Add favicon and social image tags in the `<head>`.
-- Extend heuristics in the JS section of `index.html`.
+## 📧 Contact Integration
 
-## Security Note
-This tool provides heuristic checks and educational guidance. It does not guarantee detection of all phishing attempts. Always verify with official sources.
+The contact form is set up for integration with:
+- **EmailJS**: For direct email sending
+- **Formspree**: For form handling
+- **Custom API**: For backend integration
 
-## License
-Choose one and add a LICENSE file (e.g., MIT, Apache-2.0).
+Update the form submission logic in `app/contact/page.tsx` to integrate with your preferred service.
 
+## 🔧 Future Enhancements
 
+- [ ] Dark/Light theme toggle
+- [ ] Blog section for security articles
+- [ ] Interactive terminal with commands
+- [ ] 3D elements and animations
+- [ ] Multi-language support
+- [ ] PWA functionality
+- [ ] Advanced animations and effects
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+## 📞 Contact
+
+**Abhinav Singh**
+- Email: abhinavsingh14371@gmail.com
+- LinkedIn: [linkedin.com/in/abhinav-singh](https://linkedin.com/in/abhinav-singh)
+- GitHub: [github.com/abhinav-singh](https://github.com/abhinav-singh)
+
+---
+
+Made with ❤️ by Abhinav Singh
