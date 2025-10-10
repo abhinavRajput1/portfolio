@@ -8,6 +8,50 @@ const CertificatesPage = () => {
   const certificates = [
     {
       id: 1,
+      title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
+      issuer: 'Oracle',
+      date: 'September 08, 2025',
+      expirationDate: 'September 08, 2027',
+      description: 'The Oracle Cloud Infrastructure (OCI) AI Foundations certification introduces learners to the essential concepts of Artificial Intelligence (AI) and Machine Learning (ML), focusing on their practical implementation within Oracle Cloud Infrastructure. This certification validates foundational knowledge in AI/ML concepts, OCI AI services, and cloud-based machine learning workflows. The certification demonstrates proficiency in understanding AI use cases, data preparation for ML models, and implementing AI solutions using Oracle\'s cloud platform.',
+      skills: [
+        'Artificial Intelligence Fundamentals',
+        'Machine Learning Concepts',
+        'Oracle Cloud Infrastructure AI Services',
+        'Data Science & Analytics',
+        'Cloud Computing Architecture',
+        'AI/ML Model Deployment',
+        'Natural Language Processing',
+        'Computer Vision Basics',
+        'OCI Data Science Platform',
+        'MLOps & Model Management'
+      ],
+      credentialId: 'OCI-AI-FOUNDATIONS-2025',
+      credentialUrl: '#',
+      imageUrl: '/certificates/oracle-ai-foundations.pdf',
+      tags: ['AI', 'MachineLearning', 'OracleCloud', 'Certification', 'CloudComputing', 'DataScience', 'MLOps'],
+      examDetails: {
+        examCode: '1Z0-1122-23',
+        duration: '90 minutes',
+        questions: '50 multiple choice',
+        passingScore: '70%',
+        format: 'Online proctored'
+      },
+      prerequisites: [
+        'Basic understanding of cloud computing concepts',
+        'Familiarity with Oracle Cloud Infrastructure',
+        'Fundamental knowledge of data science principles',
+        'Understanding of AI/ML terminology'
+      ],
+      benefits: [
+        'Validates foundational AI/ML knowledge in enterprise cloud environments',
+        'Demonstrates practical skills in Oracle Cloud AI services',
+        'Enhances career prospects in AI and cloud computing roles',
+        'Provides industry-recognized credential from Oracle',
+        'Foundation for advanced Oracle AI certifications'
+      ]
+    },
+    {
+      id: 2,
       title: 'Cybersecurity Foundation',
       issuer: 'Palo Alto Networks',
       date: 'August 2025',
@@ -15,10 +59,10 @@ const CertificatesPage = () => {
       skills: ['Cybersecurity Fundamentals', 'Threat Intelligence', 'Security Architecture', 'Risk Management', 'Incident Response'],
       credentialId: 'PA-CYB-FND-2025',
       credentialUrl: '#',
-      imageUrl: '/certificates/palo-alto-foundation.jpg'
+      imageUrl: '/certificates/palo-alto-foundation.pdf'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Cybersecurity Analyst Job Simulation',
       issuer: 'Forage',
       date: 'July 2025',
@@ -26,10 +70,10 @@ const CertificatesPage = () => {
       skills: ['Threat Analysis', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Investigation', 'Risk Assessment'],
       credentialId: 'FORAGE-CYB-ANALYST-2025',
       credentialUrl: '#',
-      imageUrl: '/certificates/forage-analyst.jpg'
+      imageUrl: '/certificates/forage-analyst.pdf'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Cryptography & Network Security',
       issuer: 'NPTEL',
       date: 'May 2025',
@@ -37,10 +81,10 @@ const CertificatesPage = () => {
       skills: ['Cryptographic Algorithms', 'Network Protocols', 'Public Key Infrastructure', 'Digital Signatures', 'Secure Communications'],
       credentialId: 'NPTEL-CRYPT-2025',
       credentialUrl: '#',
-      imageUrl: '/certificates/nptel-cryptography.jpg'
+      imageUrl: '/certificates/nptel-cryptography.pdf'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Diving Deep in Cyber Security',
       issuer: 'Null Vadodara',
       date: 'November 2024',
@@ -48,10 +92,10 @@ const CertificatesPage = () => {
       skills: ['Penetration Testing', 'Malware Analysis', 'Security Research', 'Vulnerability Exploitation', 'Forensic Analysis'],
       credentialId: 'NULL-DEEP-CYB-2024',
       credentialUrl: '#',
-      imageUrl: '/certificates/null-vadodara.jpg'
+      imageUrl: '/certificates/null-vadodara.pdf'
     },
     {
-      id: 5,
+      id: 6,
       title: 'Cloud Computing',
       issuer: 'EC-Council',
       date: 'Ongoing',
@@ -59,14 +103,14 @@ const CertificatesPage = () => {
       skills: ['Cloud Security', 'AWS Security', 'Azure Security', 'Cloud Architecture', 'DevSecOps'],
       credentialId: 'ECC-CLOUD-2024',
       credentialUrl: '#',
-      imageUrl: '/certificates/ec-council-cloud.jpg'
+      imageUrl: '/certificates/ec-council-cloud.pdf'
     }
   ];
 
   const stats = [
-    { label: 'Certificates Earned', value: '5+', icon: Award },
-    { label: 'Skills Mastered', value: '25+', icon: Star },
-    { label: 'Organizations', value: '5', icon: Trophy },
+    { label: 'Certificates Earned', value: '6', icon: Award },
+    { label: 'Skills Mastered', value: '30+', icon: Star },
+    { label: 'Organizations', value: '6', icon: Trophy },
     { label: 'Years Learning', value: '2+', icon: Calendar },
   ];
 
@@ -178,11 +222,11 @@ const CertificatesPage = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-neon-green rounded-full mt-2"></div>
-                    <span className="text-gray-300 font-mono text-sm">Completed 5+ professional certifications</span>
+                    <span className="text-gray-300 font-mono text-sm">Completed 6 professional certifications</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-neon-blue rounded-full mt-2"></div>
-                    <span className="text-gray-300 font-mono text-sm">Mastered 25+ cybersecurity skills</span>
+                    <span className="text-gray-300 font-mono text-sm">Mastered 30+ cybersecurity and AI/ML skills</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-neon-green rounded-full mt-2"></div>

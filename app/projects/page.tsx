@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Search, Shield, Code, Network } from 'lucide-react';
+import { Search, Shield, Code, Network, Link } from 'lucide-react';
 import ProjectCard from '@/components/ProjectCard';
 
 const ProjectsPage = () => {
@@ -27,68 +27,31 @@ const ProjectsPage = () => {
     },
     {
       id: 2,
-      title: 'Vulnerability Scanner',
-      description: 'Automated web application vulnerability scanner focusing on common OWASP Top 10 vulnerabilities.',
-      longDescription: 'An advanced vulnerability scanner designed to identify common web application security flaws. The scanner performs comprehensive checks for SQL injection, XSS, CSRF, and other critical vulnerabilities. Built with modular architecture allowing for easy extension and customization.',
-      technologies: ['Python', 'Requests', 'BeautifulSoup', 'SQLMap', 'OWASP', 'Multi-threading', 'Report Generation'],
+      title: 'Phishing Checker',
+      description: 'A lightweight, single-page tool to evaluate URLs and content for common phishing indicators.',
+      longDescription: 'A user-friendly phishing detection tool designed to help users identify potentially malicious URLs and content. The tool uses heuristics to analyze suspicious URL patterns, domain characteristics, and content indicators to provide quick phishing assessments.',
+      technologies: ['JavaScript', 'HTML', 'CSS', 'URL Analysis', 'Heuristics', 'Mobile Responsive'],
       category: 'Security',
       githubUrl: '#',
+      liveUrl: 'https://phising-link-identifer.vercel.app/',
       features: [
-        'OWASP Top 10 vulnerability detection',
-        'Automated SQL injection testing',
-        'Cross-site scripting (XSS) identification',
-        'CSRF token validation',
-        'Directory traversal detection',
-        'Comprehensive reporting system',
-        'Integration with Burp Suite'
+        'Visual, friendly UI for quick checks',
+        'Heuristics for suspicious URL patterns (domains, shortening, mixed chars)',
+        'Fully mobile-responsive design',
+        'Zero dependencies – deploy anywhere instantly',
+        'Real-time URL analysis',
+        'Suspicious domain pattern detection',
+        'Mixed character analysis for obfuscation'
       ],
-      icon: Shield
-    },
-    {
-      id: 3,
-      title: 'Network Security Monitor',
-      description: 'Real-time network traffic analysis tool for detecting suspicious activities and potential threats.',
-      longDescription: 'A comprehensive network monitoring solution that analyzes traffic patterns, detects anomalies, and alerts on potential security threats. The tool provides real-time insights into network behavior and helps identify malicious activities.',
-      technologies: ['Python', 'Scapy', 'Wireshark', 'Network Analysis', 'Real-time Processing', 'Alert System'],
-      category: 'Network',
-      githubUrl: '#',
-      features: [
-        'Real-time packet capture and analysis',
-        'Anomaly detection algorithms',
-        'Custom alert rules and thresholds',
-        'Network topology mapping',
-        'Traffic pattern analysis',
-        'Integration with SIEM systems',
-        'Historical data visualization'
-      ],
-      icon: Network
-    },
-    {
-      id: 4,
-      title: 'Security Automation Scripts',
-      description: 'Collection of automated security testing scripts for common penetration testing tasks.',
-      longDescription: 'A comprehensive collection of automation scripts designed to streamline common penetration testing workflows. These scripts automate repetitive tasks, improve efficiency, and ensure consistent testing procedures across different environments.',
-      technologies: ['Python', 'Bash', 'Automation', 'API Integration', 'Report Generation', 'Multi-platform'],
-      category: 'Automation',
-      githubUrl: '#',
-      features: [
-        'Automated port scanning and service enumeration',
-        'Password policy validation scripts',
-        'Security configuration auditing',
-        'Automated report generation',
-        'Integration with popular security tools',
-        'Cross-platform compatibility',
-        'Customizable testing profiles'
-      ],
-      icon: Code
+      icon: Link
     }
   ];
 
   const stats = [
-    { label: 'Total Projects', value: '4+' },
-    { label: 'Lines of Code', value: '5K+' },
-    { label: 'Security Tools', value: '3+' },
-    { label: 'Automation Scripts', value: '10+' },
+    { label: 'Total Projects', value: '2' },
+    { label: 'Lines of Code', value: '3K+' },
+    { label: 'Security Tools', value: '2' },
+    { label: 'Web Applications', value: '1' },
   ];
 
   const containerVariants = {

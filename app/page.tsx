@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Download, Terminal, Shield, Code, Search } from 'lucide-react';
+import { ArrowRight, Download, Terminal, Shield, Code, Search, Github, Linkedin, Mail } from 'lucide-react';
 import TypingAnimation from '@/components/TypingAnimation';
 
 const HomePage = () => {
@@ -78,6 +78,40 @@ const HomePage = () => {
               Download Resume
               <Download className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
             </a>
+          </motion.div>
+
+          {/* Social Media Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="space-y-4"
+          >
+            <h3 className="text-lg font-mono text-gray-300">Connect</h3>
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/abhinavRajput1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 border border-neon-blue rounded-lg hover:bg-neon-blue/10 transition-all duration-300"
+              >
+                <Github className="w-6 h-6 text-neon-blue group-hover:scale-110 transition-transform duration-300" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abhinav-singh-959603293/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-3 border border-neon-blue rounded-lg hover:bg-neon-blue/10 transition-all duration-300"
+              >
+                <Linkedin className="w-6 h-6 text-neon-blue group-hover:scale-110 transition-transform duration-300" />
+              </a>
+              <a
+                href="mailto:abhinavsingh14371@gmail.com"
+                className="group p-3 border border-neon-blue rounded-lg hover:bg-neon-blue/10 transition-all duration-300"
+              >
+                <Mail className="w-6 h-6 text-neon-blue group-hover:scale-110 transition-transform duration-300" />
+              </a>
+            </div>
           </motion.div>
 
           {/* Stats */}

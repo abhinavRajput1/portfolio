@@ -7,6 +7,33 @@ const EventsPage = () => {
   const events = [
     {
       id: 1,
+      title: 'AWS User Groups Vadodara Community Day 2025',
+      subtitle: 'Cloud Computing, Generative AI & DevOps Innovation',
+      date: '2025',
+      type: 'Community Event',
+      location: 'Vadodara, India',
+      description: 'Attended the AWS User Groups Vadodara Community Day 2025, an immersive event dedicated to exploring the latest innovations in Cloud Computing, Generative AI, DevOps, and Software Development Lifecycle. The day was filled with deep technical sessions, inspiring talks, and networking opportunities with industry leaders and AWS experts.',
+      topics: [
+        'AWS Services & Cloud-Native Architectures',
+        'Generative AI Technologies',
+        'DevOps Best Practices',
+        'Software Development Lifecycle',
+        'Cloud Computing Innovations',
+        'Industry-Scale Problem Solving'
+      ],
+      achievements: [
+        'Deep dive into AWS services & cloud-native architectures',
+        'Real-world insights from industry experts on solving problems at scale',
+        'Hands-on learning through community-driven sessions',
+        'Inspiration to build, innovate, and collaborate within the AWS ecosystem',
+        'Networked with AWS experts and community leaders',
+        'Gained practical knowledge in Generative AI and DevOps'
+      ],
+      icon: Users,
+      status: 'completed'
+    },
+    {
+      id: 2,
       title: 'Null Vadodara Workshop',
       subtitle: 'Diving Deep into Cybersecurity',
       date: 'November 2024',
@@ -31,7 +58,7 @@ const EventsPage = () => {
       status: 'completed'
     },
     {
-      id: 2,
+      id: 3,
       title: 'Cybersecurity Seminar',
       subtitle: 'Future of Digital Security',
       date: 'March 2025',
@@ -55,7 +82,7 @@ const EventsPage = () => {
       status: 'upcoming'
     },
     {
-      id: 3,
+      id: 4,
       title: 'CTF Competition',
       subtitle: 'Capture The Flag - Security Challenge',
       date: 'January 2025',
@@ -80,7 +107,7 @@ const EventsPage = () => {
       status: 'completed'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Hackathon',
       subtitle: 'Build Secure Applications',
       date: 'May 2025',
@@ -110,7 +137,8 @@ const EventsPage = () => {
     'Workshop': 'bg-neon-green/20 text-neon-green border-neon-green/30',
     'Seminar': 'bg-neon-blue/20 text-neon-blue border-neon-blue/30',
     'Competition': 'bg-purple-400/20 text-purple-400 border-purple-400/30',
-    'Hackathon': 'bg-yellow-400/20 text-yellow-400 border-yellow-400/30'
+    'Hackathon': 'bg-yellow-400/20 text-yellow-400 border-yellow-400/30',
+    'Community Event': 'bg-orange-400/20 text-orange-400 border-orange-400/30'
   };
 
   const statusColors = {

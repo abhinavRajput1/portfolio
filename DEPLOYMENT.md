@@ -7,7 +7,7 @@ This guide covers different deployment options for the Abhinav Singh Portfolio w
 ### 1. Vercel (Recommended)
 
 **One-click deploy:**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/abhinav-singh-portfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/abhinavRajput1/portfolio)
 
 **Manual deployment:**
 1. Push your code to GitHub
@@ -23,7 +23,7 @@ This guide covers different deployment options for the Abhinav Singh Portfolio w
 ### 2. Netlify
 
 **One-click deploy:**
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/your-username/abhinav-singh-portfolio)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/abhinavRajput1/portfolio)
 
 **Manual deployment:**
 1. Build the project: `npm run build`

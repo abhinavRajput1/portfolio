@@ -9,13 +9,13 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: '#',
+      href: 'https://github.com/abhinavRajput1',
       icon: Github,
       color: 'hover:text-gray-300'
     },
     {
       name: 'LinkedIn',
-      href: '#',
+      href: 'https://www.linkedin.com/in/abhinav-singh-959603293/',
       icon: Linkedin,
       color: 'hover:text-blue-400'
     },
@@ -72,6 +72,8 @@ const Footer = () => {
                 <motion.a
                   key={social.name}
                   href={social.href}
+                  target={social.name === 'Email' ? '_self' : '_blank'}
+                  rel={social.name === 'Email' ? '' : 'noopener noreferrer'}
                   className={`p-2 border border-neon-blue/30 rounded-lg text-neon-blue transition-all duration-300 ${social.color}`}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}

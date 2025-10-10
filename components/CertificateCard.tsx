@@ -14,6 +14,17 @@ interface Certificate {
   credentialId?: string;
   credentialUrl?: string;
   imageUrl?: string;
+  expirationDate?: string;
+  tags?: string[];
+  examDetails?: {
+    examCode: string;
+    duration: string;
+    questions: string;
+    passingScore: string;
+    format: string;
+  };
+  prerequisites?: string[];
+  benefits?: string[];
 }
 
 interface CertificateCardProps {
@@ -88,17 +99,6 @@ const CertificateCard = ({ certificate, index }: CertificateCardProps) => {
           <span className="text-xs text-gray-400 font-mono">
             Click to view details
           </span>
-          {certificate.credentialUrl && (
-            <a
-              href={certificate.credentialUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="p-2 border border-neon-green/30 rounded-lg text-neon-green hover:bg-neon-green hover:text-cyber-dark transition-all duration-300"
-            >
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          )}
         </div>
       </motion.div>
 
@@ -137,6 +137,12 @@ const CertificateCard = ({ certificate, index }: CertificateCardProps) => {
                         <Calendar className="w-4 h-4" />
                         <span className="font-mono">{certificate.date}</span>
                       </div>
+                      {certificate.expirationDate && (
+                        <div className="flex items-center space-x-2 text-orange-400 text-sm">
+                          <Calendar className="w-4 h-4" />
+                          <span className="font-mono">Expires: {certificate.expirationDate}</span>
+                        </div>
+                      )}
                       {certificate.credentialId && (
                         <span className="text-xs text-gray-400 font-mono">
                           ID: {certificate.credentialId}
@@ -175,6 +181,98 @@ const CertificateCard = ({ certificate, index }: CertificateCardProps) => {
                   </div>
                 </div>
 
+                {/* Tags */}
+                {certificate.tags && certificate.tags.length > 0 && (
+                  <div>
+                    <h3 className="text-lg font-cyber font-bold text-neon-blue mb-3">
+                      Tags
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {certificate.tags.map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-3 py-1 bg-cyber-light border border-neon-blue/30 rounded-full text-sm font-mono text-neon-blue"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Exam Details */}
+                {certificate.examDetails && (
+                  <div>
+                    <h3 className="text-lg font-cyber font-bold text-purple-400 mb-3">
+                      Exam Details
+                    </h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-gray-400 font-mono text-sm">Exam Code:</span>
+                          <span className="text-white font-mono text-sm">{certificate.examDetails.examCode}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-400 font-mono text-sm">Duration:</span>
+                          <span className="text-white font-mono text-sm">{certificate.examDetails.duration}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-400 font-mono text-sm">Questions:</span>
+                          <span className="text-white font-mono text-sm">{certificate.examDetails.questions}</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between">
+                          <span className="text-gray-400 font-mono text-sm">Passing Score:</span>
+                          <span className="text-white font-mono text-sm">{certificate.examDetails.passingScore}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-400 font-mono text-sm">Format:</span>
+                          <span className="text-white font-mono text-sm">{certificate.examDetails.format}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Prerequisites */}
+                {certificate.prerequisites && certificate.prerequisites.length > 0 && (
+                  <div>
+                    <h3 className="text-lg font-cyber font-bold text-yellow-400 mb-3">
+                      Prerequisites
+                    </h3>
+                    <ul className="space-y-2">
+                      {certificate.prerequisites.map((prereq, prereqIndex) => (
+                        <li key={prereqIndex} className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-300 font-mono text-sm leading-relaxed">
+                            {prereq}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Benefits */}
+                {certificate.benefits && certificate.benefits.length > 0 && (
+                  <div>
+                    <h3 className="text-lg font-cyber font-bold text-green-400 mb-3">
+                      Benefits & Value
+                    </h3>
+                    <ul className="space-y-2">
+                      {certificate.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start space-x-3">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-300 font-mono text-sm leading-relaxed">
+                            {benefit}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 {/* Action Buttons */}
                 <div className="flex space-x-4 pt-4">
                   {certificate.credentialUrl && (
@@ -189,10 +287,16 @@ const CertificateCard = ({ certificate, index }: CertificateCardProps) => {
                     </a>
                   )}
                   {certificate.imageUrl && (
-                    <button className="cyber-button flex items-center space-x-2">
+                    <a
+                      href={certificate.imageUrl}
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cyber-button flex items-center space-x-2"
+                    >
                       <Download className="w-4 h-4" />
                       <span>Download Certificate</span>
-                    </button>
+                    </a>
                   )}
                 </div>
               </div>

@@ -1,19 +1,9 @@
 'use client';
 
-import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Send, CheckCircle, AlertCircle, MapPin, Phone, Clock } from 'lucide-react';
+import { Mail, Github, Linkedin, CheckCircle, MapPin, Clock } from 'lucide-react';
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const formRef = useRef<HTMLFormElement>(null);
 
   const contactInfo = [
     {
@@ -26,15 +16,15 @@ const ContactPage = () => {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/abhinav-singh',
-      href: '#',
+      value: 'github.com/abhinavRajput1',
+      href: 'https://github.com/abhinavRajput1',
       color: 'text-gray-300'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/abhinav-singh',
-      href: '#',
+      value: 'linkedin.com/in/abhinav-singh-959603293',
+      href: 'https://www.linkedin.com/in/abhinav-singh-959603293/',
       color: 'text-blue-400'
     },
     {
@@ -46,32 +36,6 @@ const ContactPage = () => {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Simulate form submission (replace with actual EmailJS or Formspree integration)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // For demo purposes, always show success
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -108,7 +72,7 @@ const ContactPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+          className="max-w-4xl mx-auto"
         >
           {/* Contact Information */}
           <motion.div variants={itemVariants} className="space-y-8">
@@ -164,144 +128,8 @@ const ContactPage = () => {
               </div>
             </motion.div>
 
-            {/* Response Time */}
-            <motion.div variants={itemVariants} className="glass-effect rounded-lg p-8">
-              <h2 className="text-2xl font-cyber font-bold text-neon-blue mb-6">
-                Response Time
-              </h2>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300 font-mono">Email Response</span>
-                  <span className="text-neon-green font-mono font-bold">Within 24 hours</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300 font-mono">Project Inquiries</span>
-                  <span className="text-neon-blue font-mono font-bold">Within 48 hours</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300 font-mono">Urgent Matters</span>
-                  <span className="text-neon-green font-mono font-bold">Same day</span>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
-          {/* Contact Form */}
-          <motion.div variants={itemVariants} className="glass-effect rounded-lg p-8">
-            <h2 className="text-2xl font-cyber font-bold text-neon-green mb-6">
-              Send Message
-            </h2>
-            
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-mono text-gray-300 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-cyber-dark border border-neon-blue/30 rounded-lg text-white font-mono focus:border-neon-blue focus:outline-none focus:shadow-[0_0_10px_rgba(0,245,255,0.3)] transition-all duration-300"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-mono text-gray-300 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 bg-cyber-dark border border-neon-blue/30 rounded-lg text-white font-mono focus:border-neon-blue focus:outline-none focus:shadow-[0_0_10px_rgba(0,245,255,0.3)] transition-all duration-300"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-mono text-gray-300 mb-2">
-                  Subject *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-cyber-dark border border-neon-blue/30 rounded-lg text-white font-mono focus:border-neon-blue focus:outline-none focus:shadow-[0_0_10px_rgba(0,245,255,0.3)] transition-all duration-300"
-                  placeholder="What's this about?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-mono text-gray-300 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-cyber-dark border border-neon-blue/30 rounded-lg text-white font-mono focus:border-neon-blue focus:outline-none focus:shadow-[0_0_10px_rgba(0,245,255,0.3)] transition-all duration-300 resize-none"
-                  placeholder="Tell me about your project, question, or just say hello!"
-                />
-              </div>
-
-              <motion.button
-                type="submit"
-                disabled={isSubmitting}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full cyber-button flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
-                    <span>Sending...</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </motion.button>
-
-              {/* Status Messages */}
-              {submitStatus === 'success' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center space-x-2 text-neon-green font-mono text-sm"
-                >
-                  <CheckCircle className="w-5 h-5" />
-                  <span>Message sent successfully! I'll get back to you soon.</span>
-                </motion.div>
-              )}
-
-              {submitStatus === 'error' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center space-x-2 text-red-400 font-mono text-sm"
-                >
-                  <AlertCircle className="w-5 h-5" />
-                  <span>Failed to send message. Please try again or email me directly.</span>
-                </motion.div>
-              )}
-            </form>
-          </motion.div>
         </motion.div>
 
         {/* Call to Action */}
@@ -331,7 +159,6 @@ const ContactPage = () => {
               download
               className="cyber-button-secondary inline-flex items-center justify-center space-x-2"
             >
-              <Send className="w-5 h-5" />
               <span>Download Resume</span>
             </a>
           </div>
