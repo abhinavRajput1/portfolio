@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Users, Award, Clock, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, Users, Award, Clock } from 'lucide-react';
 
 const EventsPage = () => {
   const events = [
@@ -290,11 +290,6 @@ const EventsPage = () => {
                     {event.status === 'upcoming' && '⏰ Upcoming event'}
                     {event.status === 'planned' && '📅 Planned for future'}
                   </div>
-                  {event.status === 'completed' && (
-                    <button className="cyber-button text-sm">
-                      View Certificate
-                    </button>
-                  )}
                 </div>
               </motion.div>
             </motion.div>

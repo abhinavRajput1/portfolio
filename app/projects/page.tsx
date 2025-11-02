@@ -13,7 +13,7 @@ const ProjectsPage = () => {
       longDescription: 'A powerful reconnaissance tool designed to automate the process of subdomain enumeration. The tool leverages multiple techniques including DNS brute-forcing, certificate transparency logs, and various APIs to discover hidden subdomains. Built with Python and shell scripting, it provides comprehensive coverage for penetration testing and security assessments.',
       technologies: ['Python', 'Shell Scripting', 'DNS', 'Certificate Transparency', 'API Integration', 'Regex', 'Threading'],
       category: 'Security',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/abhinavRajput1/Subdomain_Enumeration',
       features: [
         'DNS brute-forcing with custom wordlists',
         'Certificate transparency log scanning',
@@ -32,7 +32,7 @@ const ProjectsPage = () => {
       longDescription: 'A user-friendly phishing detection tool designed to help users identify potentially malicious URLs and content. The tool uses heuristics to analyze suspicious URL patterns, domain characteristics, and content indicators to provide quick phishing assessments.',
       technologies: ['JavaScript', 'HTML', 'CSS', 'URL Analysis', 'Heuristics', 'Mobile Responsive'],
       category: 'Security',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/abhinavRajput1/phising_link_identifer',
       liveUrl: 'https://phising-link-identifer.vercel.app/',
       features: [
         'Visual, friendly UI for quick checks',
