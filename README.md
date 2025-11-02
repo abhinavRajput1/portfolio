@@ -16,7 +16,7 @@
 
 ## 🌟 Live Demo
 
-🔗 **[View Portfolio]([abhinav-rajput.vercel.app](https://abhinav-rajput.vercel.app/)** *(Update with your actual deployment URL)*
+🌐 Check Out My Portfolio[https://abhinav-rajput.vercel.app/]
 
 ---
 
