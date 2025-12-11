@@ -21,6 +21,51 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Abhinav Singh',
+            jobTitle: 'Cybersecurity Student & Ethical Hacker',
+            description: 'B.Tech Cyber/Computer Forensics student specializing in ethical hacking, penetration testing, and digital forensics',
+            url: 'https://www.rajputabhinav.in',
+            image: 'https://www.rajputabhinav.in/og-image.png',
+            email: 'abhinavsingh14371@gmail.com',
+            knowsAbout: [
+              'Cybersecurity',
+              'Ethical Hacking',
+              'Penetration Testing',
+              'Digital Forensics',
+              'Network Security',
+              'Kali Linux',
+              'Python Programming',
+              'Cryptography',
+              'Security Tools',
+              'Vulnerability Assessment'
+            ],
+            sameAs: [
+              'https://github.com/abhinavRajput1',
+              'https://www.linkedin.com/in/abhinav-singh-959603293/'
+            ],
+            affiliation: {
+              '@type': 'Organization',
+              name: 'Hacktify',
+              url: 'https://hacktify.com'
+            },
+            worksFor: {
+              '@type': 'Organization',
+              name: 'Hacktify'
+            },
+            alumniOf: {
+              '@type': 'EducationalOrganization',
+              name: 'B.Tech in Cyber/Computer Forensics'
+            }
+          })
+        }}
+      />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Column - Hero Content */}
         <motion.div
@@ -42,7 +87,7 @@ const HomePage = () => {
                 Abhinav Singh
               </span>
             </h1>
-            
+
             <div className="text-2xl md:text-3xl font-mono">
               <TypingAnimation texts={typingTexts} />
             </div>
@@ -55,7 +100,7 @@ const HomePage = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg text-gray-300 font-mono leading-relaxed max-w-lg"
           >
-            Exploring the world of ethical hacking, digital forensics, and cyber defense. 
+            Exploring the world of ethical hacking, digital forensics, and cyber defense.
             Passionate about solving security challenges and protecting digital infrastructure.
           </motion.p>
 
@@ -70,9 +115,9 @@ const HomePage = () => {
               View Projects
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            <a 
-              href="/resume.pdf" 
-              download 
+            <a
+              href="/resume.pdf"
+              download
               className="cyber-button-secondary group"
             >
               Download Resume
@@ -180,38 +225,38 @@ const HomePage = () => {
 
           {/* Floating Elements */}
           <motion.div
-            animate={{ 
+            animate={{
               y: [0, -20, 0],
               rotate: [0, 5, 0]
             }}
-            transition={{ 
-              duration: 4, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
             }}
             className="absolute -top-10 -right-10 w-20 h-20 border-2 border-neon-blue/30 rounded-lg rotate-45"
           />
           <motion.div
-            animate={{ 
+            animate={{
               y: [0, 20, 0],
               rotate: [0, -5, 0]
             }}
-            transition={{ 
-              duration: 3, 
-              repeat: Infinity, 
+            transition={{
+              duration: 3,
+              repeat: Infinity,
               ease: "easeInOut",
               delay: 1
             }}
             className="absolute -bottom-10 -left-10 w-16 h-16 border-2 border-neon-green/30 rounded-full"
           />
           <motion.div
-            animate={{ 
+            animate={{
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.6, 0.3]
             }}
-            transition={{ 
-              duration: 2, 
-              repeat: Infinity, 
+            transition={{
+              duration: 2,
+              repeat: Infinity,
               ease: "easeInOut",
               delay: 0.5
             }}
