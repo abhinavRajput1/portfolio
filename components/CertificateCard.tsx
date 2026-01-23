@@ -48,7 +48,7 @@ const CertificateCard = ({ certificate, index }: CertificateCardProps) => {
   };
 
   return (
-    <>
+    <div className="relative">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -95,30 +95,41 @@ const CertificateCard = ({ certificate, index }: CertificateCardProps) => {
           )}
         </div>
 
-        <div className="flex items-center justify-between">
-          <span className="text-xs text-gray-400 font-mono">
-            Click to view details
-          </span>
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-neon-blue/20">
+          <span className="text-xs text-gray-400 font-mono">Click to view details</span>
+          <span className="text-xs text-neon-green font-mono">View more</span>
         </div>
       </motion.div>
 
       {/* Modal */}
       <AnimatePresence>
         {isModalOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setIsModalOpen(false)}
-          >
+          <>
+            {/* Click-away overlay */}
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              className="glass-effect rounded-lg p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40"
+              onClick={() => setIsModalOpen(false)}
+            />
+
+            {/* Responsive modal (top-aligned on mobile, centered on desktop) */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 12 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-50 flex items-start md:items-center justify-center p-4 md:p-8 overflow-y-auto bg-black/80 backdrop-blur-sm"
             >
+              <motion.div
+                initial={{ scale: 0.98, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.98, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="glass-effect bg-cyber-dark/95 border border-neon-blue/30 rounded-lg p-6 md:p-8 w-full max-w-3xl shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
               {/* Modal Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-4">
@@ -300,11 +311,12 @@ const CertificateCard = ({ certificate, index }: CertificateCardProps) => {
                   )}
                 </div>
               </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 

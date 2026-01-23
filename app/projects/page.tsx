@@ -44,14 +44,95 @@ const ProjectsPage = () => {
         'Mixed character analysis for obfuscation'
       ],
       icon: Link
+    },
+    {
+      id: 3,
+      title: 'Secure Metadata Sanitization Tool (MetaClean)',
+      description: 'Privacy-focused web app to strip sensitive metadata from images, documents, and media before sharing.',
+      longDescription: 'MetaClean is a privacy-first metadata sanitization tool that scans files for sensitive EXIF/XMP/IPTC and document properties, shows a risk report, and safely strips them before you share. It targets GPS coordinates, author/company data, revision history, hidden media tags, and more—processing files securely with a modern React + Tailwind interface.',
+      technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Metadata Sanitization', 'EXIF/IPTC/XMP', 'PDF & Office Docs', 'Audio/Video Metadata'],
+      category: 'Security',
+      githubUrl: 'https://github.com/abhinavRajput1/metadata-sanitisor.git',
+      features: [
+        'Privacy-first processing; originals never exposed publicly',
+        'Comprehensive metadata removal for images (EXIF/IPTC/XMP)',
+        'Document cleaning: author, company, revision history, properties',
+        'Media sanitization for audio/video tags',
+        'Detailed risk analysis report before cleaning',
+        'Modern responsive UI built with React and Tailwind CSS',
+        'Cross-platform in any modern browser'
+      ],
+      icon: Shield
+    },
+    {
+      id: 4,
+      title: 'CyberQuest: Cybersecurity Awareness Game',
+      description: 'Gamified cybersecurity platform with missions for phishing detection, network security puzzles, and OSINT practice.',
+      longDescription: 'CyberQuest is a fun, mission-based learning platform where students tackle phishing email challenges, network security puzzles, and OSINT missions in a safe environment. It uses gamification (XP, levels, badges) and progress tracking to keep learners engaged while building practical security skills.',
+      technologies: [
+        'React 18',
+        'TypeScript',
+        'Vite',
+        'Tailwind CSS',
+        'React Router',
+        'Axios',
+        'Node.js',
+        'Express',
+        'MongoDB',
+        'Mongoose',
+        'JWT',
+        'bcryptjs'
+      ],
+      category: 'Security',
+      githubUrl: 'https://github.com/abhinavRajput1/cyberquest.git',
+      features: [
+        'Phishing email challenges with real-world patterns',
+        'Network security puzzles and configuration scenarios',
+        'OSINT missions to understand digital footprints and privacy risks',
+        'Gamification: XP, levels, and unlockable badges',
+        'Progress tracking across mission categories',
+        'Dark cyber-themed UI built with React + Tailwind',
+        'Secure backend with JWT auth and hashed credentials'
+      ],
+      icon: Code
+    },
+    {
+      id: 5,
+      title: 'Deepfake Image Detector',
+      description: 'Cyber-themed web app with FastAPI backend to flag synthetic (deepfake) images and show REAL vs FAKE probabilities.',
+      longDescription: 'Deepfake Image Detector pairs a FastAPI backend (with optional DeepFace embeddings) and a Tailwind frontend dashboard. Users upload JPG/PNG images, get REAL vs FAKE verdicts with probability bars, and can review recent scans stored in SQLite. If DeepFace/GPU is unavailable, it falls back to a heuristic frequency+histogram detector to stay responsive.',
+      technologies: [
+        'FastAPI',
+        'Python',
+        'DeepFace (optional)',
+        'SQLite',
+        'React',
+        'TypeScript',
+        'Tailwind CSS',
+        'Vite',
+        'Node.js',
+        'Express'
+      ],
+      category: 'Security',
+      githubUrl: 'https://github.com/abhinavRajput1/deepfake.git',
+      features: [
+        'Upload JPG/PNG for on-device deepfake analysis',
+        'REAL vs FAKE verdict with probability bars and color cues',
+        'Loader animation and responsive dark UI',
+        'SQLite-backed history endpoint for recent scans',
+        'Sample images included for quick verification',
+        'Fallback heuristic detector when DeepFace/GPU is unavailable',
+        'Clean project split: FastAPI backend + static Tailwind dashboard'
+      ],
+      icon: Shield
     }
   ];
 
   const stats = [
-    { label: 'Total Projects', value: '2' },
-    { label: 'Lines of Code', value: '3K+' },
-    { label: 'Security Tools', value: '2' },
-    { label: 'Web Applications', value: '1' },
+    { label: 'Total Projects', value: '5' },
+    { label: 'Lines of Code', value: '6K+' },
+    { label: 'Security Tools', value: '5' },
+    { label: 'Web Applications', value: '4' },
   ];
 
   const containerVariants = {

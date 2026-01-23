@@ -8,6 +8,145 @@ const CertificatesPage = () => {
   const certificates = [
     {
       id: 1,
+      title: 'Certified Threat Intelligence & Governance Analyst (CTIGA)',
+      issuer: 'Red Team Leaders',
+      date: 'January 2026',
+      description: 'The Certified Threat Intelligence & Governance Analyst (CTIGA) certification validates expertise in threat intelligence analysis, cyber threat hunting, and security governance frameworks. This certification demonstrates proficiency in collecting, analyzing, and operationalizing threat intelligence to protect organizations from advanced cyber threats. It covers threat actor profiling, intelligence lifecycle management, risk assessment methodologies, and implementing governance frameworks for enterprise security operations.',
+      skills: [
+        'Threat Intelligence Analysis',
+        'Cyber Threat Hunting',
+        'Security Governance',
+        'Risk Management',
+        'Threat Actor Profiling',
+        'Intelligence Lifecycle Management',
+        'Security Operations',
+        'Incident Response',
+        'Vulnerability Assessment',
+        'Security Framework Implementation'
+      ],
+      credentialId: '1efb37fe60619778',
+      credentialUrl: 'https://courses.redteamleaders.com/exam-completion/1efb37fe60619778',
+      imageUrl: '/certificates/ctiga-redteamleaders.pdf',
+      tags: ['ThreatIntelligence', 'CyberSecurity', 'Governance', 'ThreatHunting', 'RiskManagement', 'SecurityOperations']
+    },
+    {
+      id: 2,
+      title: 'ICS/Scada Cybersecurity',
+      issuer: 'Red Team Leaders',
+      date: 'January 2026',
+      description: 'The ICS/SCADA Cybersecurity certification provides specialized training in securing Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) systems that are critical to modern infrastructure. This certification validates expertise in identifying vulnerabilities in operational technology (OT) environments, implementing security controls for critical infrastructure, and protecting industrial systems from cyber threats. It covers ICS/SCADA architecture, network segmentation, threat modeling for industrial environments, and incident response specific to operational technology.',
+      skills: [
+        'ICS/SCADA Security',
+        'Industrial Control Systems',
+        'Operational Technology (OT)',
+        'Critical Infrastructure Protection',
+        'SCADA Network Architecture',
+        'OT Threat Intelligence',
+        'Industrial Protocols Security',
+        'Network Segmentation',
+        'ICS Vulnerability Assessment',
+        'OT Incident Response'
+      ],
+      credentialId: 'a8985255162e71e4',
+      credentialUrl: 'https://courses.redteamleaders.com/completion/a8985255162e71e4',
+      imageUrl: '/certificates/ics-scada-redteamleaders.pdf',
+      tags: ['ICS', 'SCADA', 'CriticalInfrastructure', 'OT', 'IndustrialSecurity', 'CyberSecurity']
+    },
+    {
+      id: 3,
+      title: 'Gemini Certified University Student',
+      issuer: 'Google',
+      date: 'November 2025',
+      expirationDate: 'November 2028',
+      description: 'Certification from Google demonstrating proficiency with Gemini for academic and applied projects, including LLM fundamentals, prompt engineering, responsible AI, and building AI-powered solutions with Google tooling.',
+      skills: [
+        'Large Language Models',
+        'Prompt Engineering',
+        'Responsible AI',
+        'Generative AI Applications',
+        'Model Evaluation',
+        'AI Safety & Governance',
+        'Google AI Ecosystem',
+        'Data Preparation',
+        'Use-Case Design',
+        'AI Solution Delivery'
+      ],
+      credentialId: '165924863',
+      credentialUrl: 'https://edu.google.accredible.com/64dcba58-9ce6-4064-89ab-465b1a7f35ae',
+      imageUrl: '/certificates/google-gemini-university.pdf',
+      tags: ['Gemini', 'Google', 'AI', 'LLM', 'ResponsibleAI', 'PromptEngineering']
+    },
+    {
+      id: 4,
+      title: 'Introduction to Linux LFS101',
+      issuer: 'The Linux Foundation',
+      date: 'December 2025',
+      description: 'Entry-level certification from The Linux Foundation covering Linux fundamentals, system navigation, shell basics, package management, and foundational administration concepts for working confidently in Linux environments.',
+      skills: [
+        'Linux Fundamentals',
+        'Shell Navigation',
+        'Package Management',
+        'File Permissions',
+        'System Services',
+        'User & Group Management',
+        'Basic Networking',
+        'Command-Line Tools',
+        'Filesystem Operations',
+        'Process Management'
+      ],
+      credentialId: 'LF-trnqb1lrcr',
+      credentialUrl: 'https://trainingportal.linuxfoundation.org/learn/certificates/introduction-to-linux-lfs101?id=f8080e1b-0f79-4bd2-95df-0a1e2f7734ba',
+      imageUrl: '/certificates/linux-foundation-lfs101.pdf',
+      tags: ['Linux', 'TheLinuxFoundation', 'SysAdmin', 'DevOps', 'CLI', 'Fundamentals']
+    },
+    {
+      id: 5,
+      title: 'ISO/IEC 27001:2022 Lead Auditor',
+      issuer: 'Mastermind',
+      date: 'December 2025',
+      description: 'Lead Auditor certification for ISO/IEC 27001:2022 demonstrating capability to plan, conduct, report, and follow up on Information Security Management System (ISMS) audits in alignment with ISO/IEC 27006 requirements and GRC best practices.',
+      skills: [
+        'Audit Principles',
+        'Audit Process',
+        'Governance, Risk Management, and Compliance (GRC)',
+        'Information Security',
+        'ISO/IEC 27006',
+        'ISO/IEC 27001:2022',
+        'ISMS Auditing',
+        'Risk Assessment',
+        'Compliance Reporting',
+        'Corrective Actions'
+      ],
+      credentialId: 'gwoklqorjt',
+      credentialUrl: 'https://learn.mastermindassurance.com/certificates/gwoklqorjt',
+      imageUrl: '/certificates/iso-27001-lead-auditor.pdf',
+      tags: ['ISO27001', 'LeadAuditor', 'GRC', 'InformationSecurity', 'Compliance', 'Audit']
+    },
+    {
+      id: 6,
+      title: 'Network Security Practitioner (CNSP)',
+      issuer: 'The SecOps Group (Creators of PentestingExams.com)',
+      date: 'November 2025',
+      description: 'Certification validating practical competence in network security fundamentals including secure network architectures, DNS hardening, intrusion detection and prevention, and applied defensive techniques.',
+      skills: [
+        'Network Security',
+        'Domain Name System (DNS)',
+        'Secure Network Architecture',
+        'Intrusion Detection & Prevention',
+        'Firewall Policies',
+        'Traffic Analysis',
+        'Threat Mitigation',
+        'Vulnerability Assessment',
+        'Security Monitoring',
+        'Incident Response'
+      ],
+      credentialId: '10764465',
+      credentialUrl: 'https://candidate.speedexam.net/certificate.aspx?SSTATE=am4131EniU8ntjp4bO5mXe5xYPhEdtTiOkz4JnYrXCsOWxLoMoXm/rVUtsk2mDiYkRrefMtPu3aGmdHaq+ec4kakddWlRZMmHrQzasQ1aRA=',
+      imageUrl: '/certificates/csnp-secops.pdf',
+      tags: ['NetworkSecurity', 'DNS', 'SecOps', 'DefensiveSecurity', 'InfrastructureSecurity']
+    },
+    {
+      id: 7,
       title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
       issuer: 'Oracle',
       date: 'September 08, 2025',
@@ -51,7 +190,7 @@ const CertificatesPage = () => {
       ]
     },
     {
-      id: 2,
+      id: 8,
       title: 'Cybersecurity Foundation',
       issuer: 'Palo Alto Networks',
       date: 'August 2025',
@@ -62,7 +201,7 @@ const CertificatesPage = () => {
       imageUrl: '/certificates/palo-alto-foundation.pdf'
     },
     {
-      id: 3,
+      id: 9,
       title: 'Cybersecurity Analyst Job Simulation',
       issuer: 'Forage',
       date: 'July 2025',
@@ -73,7 +212,7 @@ const CertificatesPage = () => {
       imageUrl: '/certificates/forage-analyst.pdf'
     },
     {
-      id: 4,
+      id: 10,
       title: 'Cryptography & Network Security',
       issuer: 'NPTEL',
       date: 'May 2025',
@@ -84,7 +223,7 @@ const CertificatesPage = () => {
       imageUrl: '/certificates/nptel-cryptography.pdf'
     },
     {
-      id: 5,
+      id: 11,
       title: 'Diving Deep in Cyber Security',
       issuer: 'Null Vadodara',
       date: 'November 2024',
@@ -95,7 +234,7 @@ const CertificatesPage = () => {
       imageUrl: '/certificates/null-vadodara.pdf'
     },
     {
-      id: 6,
+      id: 12,
       title: 'Cloud Computing',
       issuer: 'EC-Council',
       date: 'Ongoing',
@@ -108,7 +247,7 @@ const CertificatesPage = () => {
   ];
 
   const stats = [
-    { label: 'Certificates Earned', value: '6', icon: Award },
+    { label: 'Certificates Earned', value: '12', icon: Award },
     { label: 'Skills Mastered', value: '30+', icon: Star },
     { label: 'Organizations', value: '6', icon: Trophy },
     { label: 'Years Learning', value: '2+', icon: Calendar },
@@ -171,7 +310,7 @@ const CertificatesPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
         >
           {certificates.map((certificate, index) => (
             <CertificateCard key={certificate.id} certificate={certificate} index={index} />
@@ -222,7 +361,7 @@ const CertificatesPage = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-neon-green rounded-full mt-2"></div>
-                    <span className="text-gray-300 font-mono text-sm">Completed 6 professional certifications</span>
+                    <span className="text-gray-300 font-mono text-sm">Completed 12 professional certifications</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-neon-blue rounded-full mt-2"></div>

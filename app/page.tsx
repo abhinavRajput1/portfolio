@@ -15,7 +15,7 @@ const HomePage = () => {
 
   const stats = [
     { label: 'Projects Completed', value: '5+', icon: Code },
-    { label: 'Certificates Earned', value: '5+', icon: Shield },
+    { label: 'Certificates Earned', value: '12+', icon: Shield },
     { label: 'Vulnerabilities Found', value: '10+', icon: Search },
   ];
 

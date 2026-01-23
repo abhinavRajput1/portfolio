@@ -33,6 +33,56 @@ const EventsPage = () => {
       status: 'completed'
     },
     {
+      id: 5,
+      title: 'AWS Students Community Day 2025',
+      subtitle: 'Volunteer – Collaboration, Leadership & Cloud Learning',
+      date: '2025',
+      type: 'Community Event',
+      location: 'Parul University, Vadodara',
+      description: 'Volunteered at AWS Students Community Day 2025 hosted at Parul University. A collaborative, high-energy experience focused on team coordination, seamless event execution, and community-driven growth. Strengthened communication, leadership, and real-world exposure while supporting sessions on AWS certifications and AI agents in AWS. Grateful to the organizers, mentors, and fellow volunteers who made the event impactful and inclusive.',
+      topics: [
+        'AWS Certifications',
+        'AI Agents in AWS',
+        'Community Building & Collaboration',
+        'Accessibility & Inclusion',
+        'Event Operations & Coordination'
+      ],
+      achievements: [
+        'Coordinated volunteer activities and logistics',
+        'Enhanced communication and teamwork skills',
+        'Supported speaker sessions and participant guidance',
+        'Engaged with AWS community leaders and organizers',
+        'Contributed to a smooth, inclusive event experience'
+      ],
+      icon: Users,
+      status: 'completed'
+    },
+    {
+      id: 6,
+      title: "MakerFest Vadodara '26",
+      subtitle: 'Startup Showcase – EduCatch (AI Motion-Based Learning)',
+      date: '2026',
+      type: 'Community Event',
+      location: 'The Maharaja Sayajirao University of Baroda (MSU), Vadodara',
+      description: "Showcased our startup EduCatch, an AI-powered, motion-based learning platform, at MakerFest Vadodara—Gujarat's largest open platform for innovation. Shortlisted from numerous applications, we engaged with students, educators, innovators, and industry professionals to gather practical insights, constructive feedback, and validation for scaling in EdTech.",
+      topics: [
+        'Innovation & Maker Community',
+        'AI in Education',
+        'EdTech Product Design',
+        'User Research & Feedback',
+        'Startup Showcase & Networking'
+      ],
+      achievements: [
+        'Shortlisted and selected to exhibit EduCatch',
+        'Presented to diverse audience segments',
+        'Collected actionable feedback and validation',
+        'Strengthened network with innovators and mentors',
+        'Gained motivation to iterate and scale the product'
+      ],
+      icon: Users,
+      status: 'completed'
+    },
+    {
       id: 2,
       title: 'Null Vadodara Workshop',
       subtitle: 'Diving Deep into Cybersecurity',
@@ -106,31 +156,7 @@ const EventsPage = () => {
       icon: Award,
       status: 'completed'
     },
-    {
-      id: 5,
-      title: 'Hackathon',
-      subtitle: 'Build Secure Applications',
-      date: 'May 2025',
-      type: 'Hackathon',
-      location: 'Ahmedabad, Gujarat',
-      description: '48-hour hackathon focused on building secure applications with emphasis on security-first development practices and implementing robust security measures.',
-      topics: [
-        'Secure Coding Practices',
-        'API Security',
-        'Authentication & Authorization',
-        'Data Protection',
-        'Security Testing',
-        'DevSecOps Integration'
-      ],
-      achievements: [
-        'Built secure web application',
-        'Implemented security best practices',
-        'Collaborated with diverse team',
-        'Presented solution to judges'
-      ],
-      icon: Users,
-      status: 'planned'
-    }
+    
   ];
 
   const eventTypes = {
@@ -162,6 +188,30 @@ const EventsPage = () => {
     visible: { opacity: 1, x: 0 }
   };
 
+  // Sort events by date (handles formats like 'March 2025', 'January 2025', '2025')
+  const normalizeDate = (dateStr: string): number => {
+    const months: Record<string, number> = {
+      January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
+      July: 6, August: 7, September: 8, October: 9, November: 10, December: 11
+    };
+    const monthYearMatch = dateStr.match(/(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})/i);
+    if (monthYearMatch) {
+      const monthName = monthYearMatch[1];
+      const year = parseInt(monthYearMatch[2], 10);
+      const monthIndex = months[monthName.charAt(0).toUpperCase() + monthName.slice(1).toLowerCase()];
+      return new Date(year, monthIndex, 1).getTime();
+    }
+    const yearMatch = dateStr.match(/(\d{4})/);
+    if (yearMatch) {
+      const year = parseInt(yearMatch[1], 10);
+      // Use end of year when only the year is provided
+      return new Date(year, 11, 31).getTime();
+    }
+    return 0;
+  };
+
+  const sortedEvents = [...events].sort((a, b) => normalizeDate(b.date) - normalizeDate(a.date));
+
   return (
     <div className="min-h-screen py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -185,14 +235,14 @@ const EventsPage = () => {
           animate="visible"
           className="space-y-8"
         >
-          {events.map((event, index) => (
+          {sortedEvents.map((event, index) => (
             <motion.div
               key={event.id}
               variants={itemVariants}
               className="relative"
             >
               {/* Timeline Line */}
-              {index < events.length - 1 && (
+              {index < sortedEvents.length - 1 && (
                 <div className="absolute left-8 top-20 w-0.5 h-full bg-neon-blue/20"></div>
               )}
 
@@ -315,13 +365,6 @@ const EventsPage = () => {
                   <div>
                     <span className="text-white font-mono">Cybersecurity Seminar - Future of Digital Security</span>
                     <div className="text-gray-400 text-sm font-mono">March 2025</div>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-neon-green" />
-                  <div>
-                    <span className="text-white font-mono">Security Hackathon - Build Secure Apps</span>
-                    <div className="text-gray-400 text-sm font-mono">May 2025</div>
                   </div>
                 </li>
               </ul>
