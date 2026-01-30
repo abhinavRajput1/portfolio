@@ -4,7 +4,6 @@ import React from 'react';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MatrixBackground from '@/components/MatrixBackground';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -132,7 +131,6 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body className={inter.className}>
-        <MatrixBackground />
         <Navbar />
         <main className="min-h-screen pt-16">
           {children}

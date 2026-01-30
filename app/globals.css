@@ -6,56 +6,68 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 @layer base {
   * {
     @apply border-cyber-gray;
   }
   
   body {
-    @apply bg-cyber-dark text-white font-mono;
-    background-image: 
-      radial-gradient(circle at 20% 50%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(57, 255, 20, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, rgba(0, 245, 255, 0.05) 0%, transparent 50%);
+    @apply font-mono;
+    color: #c9f7d2;
+    background-color: #020b05;
+    background-image: linear-gradient(to bottom, #020b05 0%, #07180c 45%, #0b2a14 100%);
     background-attachment: fixed;
-    -webkit-transform: perspective(900px);
-    -webkit-transform-style: preserve-3d;
-    transform: perspective(900px);
-    transform-style: preserve-3d;
   }
 
   html {
     scroll-behavior: smooth;
   }
 
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   ::selection {
-    @apply bg-neon-green text-cyber-dark;
+    @apply bg-green-400 text-black;
   }
 }
 
 @layer components {
   .glass-effect {
-    @apply bg-cyber-gray/30 backdrop-blur-sm border border-neon-blue/20;
+    @apply bg-gray-800/40 backdrop-blur-sm border border-gray-500/30;
   }
 
   .neon-glow {
-    @apply shadow-[0_0_10px_rgba(0,245,255,0.5)] transition-all duration-300;
+    @apply shadow-[0_0_10px_rgba(200,200,200,0.4)] transition-all duration-300;
   }
 
   .neon-glow:hover {
-    @apply shadow-[0_0_20px_rgba(0,245,255,0.8)];
+    @apply shadow-[0_0_20px_rgba(200,200,200,0.6)];
   }
 
   .cyber-button {
-    @apply px-6 py-3 bg-transparent border-2 border-neon-blue text-neon-blue font-cyber font-bold uppercase tracking-wider transition-all duration-300 hover:bg-neon-blue hover:text-cyber-dark hover:shadow-[0_0_20px_rgba(0,245,255,0.6)];
+    @apply px-6 py-3 bg-transparent border-2 border-gray-300 text-gray-300 font-cyber font-bold uppercase tracking-wider transition-all duration-300 hover:bg-gray-300 hover:text-black hover:shadow-[0_0_20px_rgba(200,200,200,0.6)];
   }
 
   .cyber-button-secondary {
-    @apply px-6 py-3 bg-transparent border-2 border-neon-green text-neon-green font-cyber font-bold uppercase tracking-wider transition-all duration-300 hover:bg-neon-green hover:text-cyber-dark hover:shadow-[0_0_20px_rgba(57,255,20,0.6)];
+    @apply px-6 py-3 bg-transparent border-2 border-gray-400 text-gray-400 font-cyber font-bold uppercase tracking-wider transition-all duration-300 hover:bg-gray-400 hover:text-black hover:shadow-[0_0_20px_rgba(160,160,160,0.6)];
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-cyber font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-green mb-8;
+    @apply text-3xl md:text-4xl font-cyber font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-100 mb-8;
   }
 
   .matrix-bg {
