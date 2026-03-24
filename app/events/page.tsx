@@ -1,10 +1,64 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Users, Award, Clock } from 'lucide-react';
+import { Calendar, MapPin, Users, Award } from 'lucide-react';
 
 const EventsPage = () => {
   const events = [
+    {
+      id: 7,
+      title: 'Cyberthon Hackathon \u2013 Aestr Alpha AI Summit 2026',
+      subtitle: 'Top 15 Finish \u2013 Innovation, AI & Cybersecurity Challenge',
+      date: 'February 2026',
+      type: 'Hackathon',
+      location: 'Suresh Gyan Vihar University, Jaipur',
+      description: 'Successfully completed the Cyberthon Hackathon at Aestr Alpha AI Summit 2026 held at Suresh Gyan Vihar University, Jaipur. Our team secured a Top 15 position among many talented innovators. This journey was full of learning, problem-solving, teamwork, and innovation. Collaborated with an outstanding team \u2014 Sagar Chhetri, Omprakash Meher, and Mansi Jaiswar \u2014 whose dedication, creativity, and collaboration were key to our performance throughout the hackathon. Events like these not only test technical skills but also build resilience, teamwork, and a real-world problem-solving mindset.',
+      topics: [
+        'Cybersecurity Challenges',
+        'Artificial Intelligence',
+        'Innovation & Problem Solving',
+        'Team Collaboration',
+        'Real-World Security Scenarios',
+        'Technology & Product Development'
+      ],
+      achievements: [
+        'Secured Top 15 position among all participating teams',
+        'Designed and developed a complete solution under hackathon constraints',
+        'Collaborated effectively with cross-functional teammates',
+        'Applied cybersecurity knowledge to real-world AI-era problems',
+        'Strengthened resilience, teamwork, and rapid prototyping skills',
+        'Networked with innovators and industry professionals at the AI Summit'
+      ],
+      icon: Award,
+      status: 'completed'
+    },
+    {
+      id: 8,
+      title: 'TechExpo 2026 \u2013 Parul University',
+      subtitle: 'Project Showcase \u2013 EduCatch (AI Motion-Based Learning)',
+      date: 'February 2026',
+      type: 'Community Event',
+      location: 'Parul University, Vadodara',
+      description: 'Presented our project EduCatch at TechExpo 2026, Parul University, alongside teammates Sagar Chhetri, Omprakash Meher, and Mansi Jaiswar. This experience gave us the opportunity to showcase our innovation, collaborate effectively, and gain valuable industry exposure. Proud of the teamwork and the learning journey shared together. Looking forward to building more innovative solutions!',
+      topics: [
+        'EdTech Innovation',
+        'AI in Education',
+        'Project Showcase & Presentation',
+        'Teamwork & Collaboration',
+        'Industry Exposure',
+        'Student Innovation'
+      ],
+      achievements: [
+        'Successfully presented EduCatch to a live audience at TechExpo 2026',
+        'Gained valuable industry feedback and exposure',
+        'Demonstrated effective teamwork and cross-functional collaboration',
+        'Showcased AI motion-based learning technology',
+        'Strengthened presentation and communication skills',
+        'Networked with students, educators, and industry professionals'
+      ],
+      icon: Users,
+      status: 'completed'
+    },
     {
       id: 1,
       title: 'AWS User Groups Vadodara Community Day 2025',
@@ -35,7 +89,7 @@ const EventsPage = () => {
     {
       id: 5,
       title: 'AWS Students Community Day 2025',
-      subtitle: 'Volunteer – Collaboration, Leadership & Cloud Learning',
+      subtitle: 'Volunteer \u2013 Collaboration, Leadership & Cloud Learning',
       date: '2025',
       type: 'Community Event',
       location: 'Parul University, Vadodara',
@@ -60,11 +114,11 @@ const EventsPage = () => {
     {
       id: 6,
       title: "MakerFest Vadodara '26",
-      subtitle: 'Startup Showcase – EduCatch (AI Motion-Based Learning)',
-      date: '2026',
+      subtitle: 'Startup Showcase \u2013 EduCatch (AI Motion-Based Learning)',
+      date: 'January 2026',
       type: 'Community Event',
       location: 'The Maharaja Sayajirao University of Baroda (MSU), Vadodara',
-      description: "Showcased our startup EduCatch, an AI-powered, motion-based learning platform, at MakerFest Vadodara—Gujarat's largest open platform for innovation. Shortlisted from numerous applications, we engaged with students, educators, innovators, and industry professionals to gather practical insights, constructive feedback, and validation for scaling in EdTech.",
+      description: "Showcased our startup EduCatch, an AI-powered, motion-based learning platform, at MakerFest Vadodara\u2014Gujarat's largest open platform for innovation. Shortlisted from numerous applications, we engaged with students, educators, innovators, and industry professionals to gather practical insights, constructive feedback, and validation for scaling in EdTech.",
       topics: [
         'Innovation & Maker Community',
         'AI in Education',
@@ -80,6 +134,55 @@ const EventsPage = () => {
         'Gained motivation to iterate and scale the product'
       ],
       icon: Users,
+      status: 'completed'
+    },
+    {
+      id: 3,
+      title: 'Cybersecurity Seminar',
+      subtitle: 'Future of Digital Security',
+      date: 'March 2025',
+      type: 'Seminar',
+      location: 'Parul University, Vadodara',
+      description: 'Academic seminar focusing on emerging trends in cybersecurity, AI in security, and the future landscape of digital threats and defenses.',
+      topics: [
+        'AI in Cybersecurity',
+        'Quantum Computing Security',
+        'IoT Security Challenges',
+        'Cloud Security Trends',
+        'Zero Trust Architecture'
+      ],
+      achievements: [
+        'Attended expert presentations',
+        'Participated in panel discussions',
+        'Connected with industry professionals',
+        'Gained insights into future security trends'
+      ],
+      icon: Users,
+      status: 'completed'
+    },
+    {
+      id: 4,
+      title: 'CTF Competition',
+      subtitle: 'Capture The Flag - Security Challenge',
+      date: 'January 2025',
+      type: 'Competition',
+      location: 'Online',
+      description: 'Participated in an online Capture The Flag competition testing various cybersecurity skills including web exploitation, cryptography, reverse engineering, and forensics.',
+      topics: [
+        'Web Application Security',
+        'Cryptography Challenges',
+        'Reverse Engineering',
+        'Digital Forensics',
+        'Network Security',
+        'Binary Exploitation'
+      ],
+      achievements: [
+        'Solved multiple challenge categories',
+        'Improved practical hacking skills',
+        'Learned new attack techniques',
+        'Enhanced problem-solving abilities'
+      ],
+      icon: Award,
       status: 'completed'
     },
     {
@@ -107,56 +210,6 @@ const EventsPage = () => {
       icon: Award,
       status: 'completed'
     },
-    {
-      id: 3,
-      title: 'Cybersecurity Seminar',
-      subtitle: 'Future of Digital Security',
-      date: 'March 2025',
-      type: 'Seminar',
-      location: 'Parul University, Vadodara',
-      description: 'Academic seminar focusing on emerging trends in cybersecurity, AI in security, and the future landscape of digital threats and defenses.',
-      topics: [
-        'AI in Cybersecurity',
-        'Quantum Computing Security',
-        'IoT Security Challenges',
-        'Cloud Security Trends',
-        'Zero Trust Architecture'
-      ],
-      achievements: [
-        'Attended expert presentations',
-        'Participated in panel discussions',
-        'Connected with industry professionals',
-        'Gained insights into future security trends'
-      ],
-      icon: Users,
-      status: 'upcoming'
-    },
-    {
-      id: 4,
-      title: 'CTF Competition',
-      subtitle: 'Capture The Flag - Security Challenge',
-      date: 'January 2025',
-      type: 'Competition',
-      location: 'Online',
-      description: 'Participated in an online Capture The Flag competition testing various cybersecurity skills including web exploitation, cryptography, reverse engineering, and forensics.',
-      topics: [
-        'Web Application Security',
-        'Cryptography Challenges',
-        'Reverse Engineering',
-        'Digital Forensics',
-        'Network Security',
-        'Binary Exploitation'
-      ],
-      achievements: [
-        'Solved multiple challenge categories',
-        'Improved practical hacking skills',
-        'Learned new attack techniques',
-        'Enhanced problem-solving abilities'
-      ],
-      icon: Award,
-      status: 'completed'
-    },
-    
   ];
 
   const eventTypes = {
@@ -177,9 +230,7 @@ const EventsPage = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+      transition: { staggerChildren: 0.1 }
     }
   };
 
@@ -188,7 +239,7 @@ const EventsPage = () => {
     visible: { opacity: 1, x: 0 }
   };
 
-  // Sort events by date (handles formats like 'March 2025', 'January 2025', '2025')
+  // Sort events by date (newest first)
   const normalizeDate = (dateStr: string): number => {
     const months: Record<string, number> = {
       January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
@@ -203,9 +254,7 @@ const EventsPage = () => {
     }
     const yearMatch = dateStr.match(/(\d{4})/);
     if (yearMatch) {
-      const year = parseInt(yearMatch[1], 10);
-      // Use end of year when only the year is provided
-      return new Date(year, 11, 31).getTime();
+      return new Date(parseInt(yearMatch[1], 10), 11, 31).getTime();
     }
     return 0;
   };
@@ -222,9 +271,9 @@ const EventsPage = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="section-title">Events & Activities</h1>
+          <h1 className="section-title">Events &amp; Activities</h1>
           <p className="text-gray-300 font-mono text-lg max-w-3xl mx-auto">
-            My participation in cybersecurity events, workshops, and competitions
+            My participation in cybersecurity events, workshops, hackathons, and competitions
           </p>
         </motion.div>
 
@@ -333,7 +382,7 @@ const EventsPage = () => {
                   </ul>
                 </div>
 
-                {/* Event Actions */}
+                {/* Event Footer */}
                 <div className="flex items-center justify-between pt-4 border-t border-neon-blue/20">
                   <div className="text-sm text-gray-400 font-mono">
                     {event.status === 'completed' && '✓ Successfully completed'}
@@ -344,51 +393,6 @@ const EventsPage = () => {
               </motion.div>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Upcoming Events Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="glass-effect rounded-lg p-8 mt-16"
-        >
-          <h2 className="text-2xl font-cyber font-bold text-neon-green mb-8 text-center">
-            Upcoming Events
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <h3 className="text-lg font-cyber font-bold text-neon-blue">Confirmed Events</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-neon-blue" />
-                  <div>
-                    <span className="text-white font-mono">Cybersecurity Seminar - Future of Digital Security</span>
-                    <div className="text-gray-400 text-sm font-mono">March 2025</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-cyber font-bold text-neon-blue">Interested Events</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center space-x-3">
-                  <Calendar className="w-5 h-5 text-neon-green" />
-                  <div>
-                    <span className="text-white font-mono">DEF CON Conference</span>
-                    <div className="text-gray-400 text-sm font-mono">TBD 2025</div>
-                  </div>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <Calendar className="w-5 h-5 text-neon-blue" />
-                  <div>
-                    <span className="text-white font-mono">Black Hat Security Conference</span>
-                    <div className="text-gray-400 text-sm font-mono">TBD 2025</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
         </motion.div>
       </div>
     </div>

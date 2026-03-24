@@ -6,8 +6,101 @@ import CertificateCard from '@/components/CertificateCard';
 
 const CertificatesPage = () => {
   const certificates = [
+    // ── March 2026 ─────────────────────────────────────────────────────────
     {
       id: 1,
+      title: 'Digital Forensics & Incident Investigation',
+      issuer: 'Red Team Leaders',
+      date: 'March 2026',
+      description: 'Certification validating expertise in digital forensics techniques and incident investigation methodologies. Covers evidence acquisition, disk and memory forensics, log analysis, chain of custody, and structured incident investigation procedures used in real-world cyber investigations.',
+      skills: [
+        'Digital Forensics',
+        'Incident Investigation',
+        'Evidence Acquisition',
+        'Disk Forensics',
+        'Memory Forensics',
+        'Log Analysis',
+        'Chain of Custody',
+        'Incident Response',
+        'Forensic Reporting',
+        'Cyber Investigation Procedures'
+      ],
+      credentialId: '034e82f19440438d',
+      credentialUrl: 'https://courses.redteamleaders.com/completion/034e82f19440438d',
+      imageUrl: '/certificates/digital-forensics-redteamleaders.pdf',
+      tags: ['DigitalForensics', 'IncidentInvestigation', 'CyberForensics', 'IncidentResponse', 'RedTeamLeaders']
+    },
+    {
+      id: 2,
+      title: 'Malware Analysis Introduction v1',
+      issuer: 'Red Team Leaders',
+      date: 'March 2026',
+      description: 'Introductory certification in malware analysis covering static and dynamic analysis techniques, reverse engineering fundamentals, malware behavior profiling, and sandbox analysis. Provides foundational skills required for analyzing malicious software and understanding attacker tooling.',
+      skills: [
+        'Malware Analysis',
+        'Static Analysis',
+        'Dynamic Analysis',
+        'Reverse Engineering',
+        'Sandbox Analysis',
+        'Malware Behavior Profiling',
+        'Threat Intelligence',
+        'Indicator of Compromise (IOC) Extraction',
+        'Disassembly Techniques',
+        'Malware Classification'
+      ],
+      credentialId: '68374c8e2a4ac2fa',
+      credentialUrl: 'https://courses.redteamleaders.com/completion/68374c8e2a4ac2fa',
+      imageUrl: '/certificates/malware-analysis-redteamleaders.pdf',
+      tags: ['MalwareAnalysis', 'ReverseEngineering', 'ThreatIntelligence', 'StaticAnalysis', 'DynamicAnalysis', 'RedTeamLeaders']
+    },
+    // ── February 2026 ──────────────────────────────────────────────────────
+    {
+      id: 3,
+      title: 'Cybersecurity Fundamentals and Insights',
+      issuer: 'Red Team Leaders',
+      date: 'February 2026',
+      description: 'Certification covering core cybersecurity concepts including network security fundamentals, cybersecurity frameworks, threat modelling, and security best practices. Provides comprehensive insights into the cybersecurity landscape and establishes a solid foundation for advanced security studies.',
+      skills: [
+        'Network Security Fundamentals',
+        'Cybersecurity Frameworks',
+        'Threat Modelling',
+        'Security Best Practices',
+        'Security Architecture',
+        'Risk Assessment',
+        'Vulnerability Management',
+        'Security Policies',
+        'Defense in Depth',
+        'Cyber Threat Landscape'
+      ],
+      imageUrl: '/certificates/cybersec-fundamentals-redteamleaders.pdf',
+      tags: ['NetworkSecurity', 'CybersecurityFrameworks', 'SecurityFundamentals', 'ThreatModelling', 'RedTeamLeaders']
+    },
+    {
+      id: 4,
+      title: 'Certificate of Participation \u2013 Digital CyberHunt CTF',
+      issuer: 'Unstop',
+      date: 'February 2026',
+      description: 'Certificate of participation in the Online Round of the Digital CyberHunt Capture The Flag (CTF) competition hosted on Unstop. Demonstrates active participation in competitive cybersecurity challenges covering areas such as cryptography, web exploitation, OSINT, reverse engineering, and forensics.',
+      skills: [
+        'CTF Competitions',
+        'Cryptography Challenges',
+        'Web Exploitation',
+        'OSINT',
+        'Reverse Engineering',
+        'Digital Forensics',
+        'Problem Solving',
+        'Competitive Cybersecurity',
+        'Capture The Flag',
+        'Ethical Hacking'
+      ],
+      credentialId: '760fcfcb-5062-4152-8c7f-8256be3352c3',
+      credentialUrl: 'https://unstop.com/certificate/760fcfcb-5062-4152-8c7f-8256be3352c3',
+      imageUrl: '/certificates/cyberhunt-ctf-unstop.pdf',
+      tags: ['CTF', 'CyberHunt', 'Unstop', 'CaptureTheFlag', 'CompetitiveSecurity', 'EthicalHacking']
+    },
+    // ── January 2026 ───────────────────────────────────────────────────────
+    {
+      id: 5,
       title: 'Certified Threat Intelligence & Governance Analyst (CTIGA)',
       issuer: 'Red Team Leaders',
       date: 'January 2026',
@@ -30,11 +123,11 @@ const CertificatesPage = () => {
       tags: ['ThreatIntelligence', 'CyberSecurity', 'Governance', 'ThreatHunting', 'RiskManagement', 'SecurityOperations']
     },
     {
-      id: 2,
+      id: 6,
       title: 'ICS/Scada Cybersecurity',
       issuer: 'Red Team Leaders',
       date: 'January 2026',
-      description: 'The ICS/SCADA Cybersecurity certification provides specialized training in securing Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) systems that are critical to modern infrastructure. This certification validates expertise in identifying vulnerabilities in operational technology (OT) environments, implementing security controls for critical infrastructure, and protecting industrial systems from cyber threats. It covers ICS/SCADA architecture, network segmentation, threat modeling for industrial environments, and incident response specific to operational technology.',
+      description: 'The ICS/SCADA Cybersecurity certification provides specialized training in securing Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) systems that are critical to modern infrastructure. This certification validates expertise in identifying vulnerabilities in operational technology (OT) environments, implementing security controls for critical infrastructure, and protecting industrial systems from cyber threats.',
       skills: [
         'ICS/SCADA Security',
         'Industrial Control Systems',
@@ -52,8 +145,79 @@ const CertificatesPage = () => {
       imageUrl: '/certificates/ics-scada-redteamleaders.pdf',
       tags: ['ICS', 'SCADA', 'CriticalInfrastructure', 'OT', 'IndustrialSecurity', 'CyberSecurity']
     },
+    // ── December 2025 ──────────────────────────────────────────────────────
     {
-      id: 3,
+      id: 7,
+      title: 'ISO/IEC 27001:2022 Lead Auditor',
+      issuer: 'Mastermind',
+      date: 'December 2025',
+      description: 'Lead Auditor certification for ISO/IEC 27001:2022 demonstrating capability to plan, conduct, report, and follow up on Information Security Management System (ISMS) audits in alignment with ISO/IEC 27006 requirements and GRC best practices.',
+      skills: [
+        'Audit Principles',
+        'Audit Process',
+        'Governance, Risk Management, and Compliance (GRC)',
+        'Information Security',
+        'ISO/IEC 27006',
+        'ISO/IEC 27001:2022',
+        'ISMS Auditing',
+        'Risk Assessment',
+        'Compliance Reporting',
+        'Corrective Actions'
+      ],
+      credentialId: 'gwoklqorjt',
+      credentialUrl: 'https://learn.mastermindassurance.com/certificates/gwoklqorjt',
+      imageUrl: '/certificates/iso-27001-lead-auditor.pdf',
+      tags: ['ISO27001', 'LeadAuditor', 'GRC', 'InformationSecurity', 'Compliance', 'Audit']
+    },
+    {
+      id: 8,
+      title: 'Certificate of Participation \u2013 niteCTF 2025',
+      issuer: 'Unstop',
+      date: 'December 2025',
+      description: 'Certificate of participation in niteCTF 2025, a competitive Capture The Flag event hosted on Unstop. Demonstrates active engagement in cybersecurity challenges spanning cryptography, web exploitation, binary exploitation, reverse engineering, OSINT, and forensics.',
+      skills: [
+        'CTF Competitions',
+        'Cryptography Challenges',
+        'Web Exploitation',
+        'Binary Exploitation',
+        'Reverse Engineering',
+        'OSINT',
+        'Digital Forensics',
+        'Problem Solving',
+        'Competitive Cybersecurity',
+        'Ethical Hacking'
+      ],
+      credentialId: 'dc4e8bd3-19c9-4be5-ba73-ba13d9d817cf',
+      credentialUrl: 'https://unstop.com/certificate/dc4e8bd3-19c9-4be5-ba73-ba13d9d817cf',
+      imageUrl: '/certificates/nitectf-2025-unstop.pdf',
+      tags: ['CTF', 'niteCTF', 'Unstop', 'CaptureTheFlag', 'CompetitiveSecurity', 'EthicalHacking']
+    },
+    {
+      id: 9,
+      title: 'Introduction to Linux LFS101',
+      issuer: 'The Linux Foundation',
+      date: 'December 2025',
+      description: 'Entry-level certification from The Linux Foundation covering Linux fundamentals, system navigation, shell basics, package management, and foundational administration concepts for working confidently in Linux environments.',
+      skills: [
+        'Linux Fundamentals',
+        'Shell Navigation',
+        'Package Management',
+        'File Permissions',
+        'System Services',
+        'User & Group Management',
+        'Basic Networking',
+        'Command-Line Tools',
+        'Filesystem Operations',
+        'Process Management'
+      ],
+      credentialId: 'LF-trnqb1lrcr',
+      credentialUrl: 'https://trainingportal.linuxfoundation.org/learn/certificates/introduction-to-linux-lfs101?id=f8080e1b-0f79-4bd2-95df-0a1e2f7734ba',
+      imageUrl: '/certificates/linux-foundation-lfs101.pdf',
+      tags: ['Linux', 'TheLinuxFoundation', 'SysAdmin', 'DevOps', 'CLI', 'Fundamentals']
+    },
+    // ── November 2025 ──────────────────────────────────────────────────────
+    {
+      id: 10,
       title: 'Gemini Certified University Student',
       issuer: 'Google',
       date: 'November 2025',
@@ -77,53 +241,7 @@ const CertificatesPage = () => {
       tags: ['Gemini', 'Google', 'AI', 'LLM', 'ResponsibleAI', 'PromptEngineering']
     },
     {
-      id: 4,
-      title: 'Introduction to Linux LFS101',
-      issuer: 'The Linux Foundation',
-      date: 'December 2025',
-      description: 'Entry-level certification from The Linux Foundation covering Linux fundamentals, system navigation, shell basics, package management, and foundational administration concepts for working confidently in Linux environments.',
-      skills: [
-        'Linux Fundamentals',
-        'Shell Navigation',
-        'Package Management',
-        'File Permissions',
-        'System Services',
-        'User & Group Management',
-        'Basic Networking',
-        'Command-Line Tools',
-        'Filesystem Operations',
-        'Process Management'
-      ],
-      credentialId: 'LF-trnqb1lrcr',
-      credentialUrl: 'https://trainingportal.linuxfoundation.org/learn/certificates/introduction-to-linux-lfs101?id=f8080e1b-0f79-4bd2-95df-0a1e2f7734ba',
-      imageUrl: '/certificates/linux-foundation-lfs101.pdf',
-      tags: ['Linux', 'TheLinuxFoundation', 'SysAdmin', 'DevOps', 'CLI', 'Fundamentals']
-    },
-    {
-      id: 5,
-      title: 'ISO/IEC 27001:2022 Lead Auditor',
-      issuer: 'Mastermind',
-      date: 'December 2025',
-      description: 'Lead Auditor certification for ISO/IEC 27001:2022 demonstrating capability to plan, conduct, report, and follow up on Information Security Management System (ISMS) audits in alignment with ISO/IEC 27006 requirements and GRC best practices.',
-      skills: [
-        'Audit Principles',
-        'Audit Process',
-        'Governance, Risk Management, and Compliance (GRC)',
-        'Information Security',
-        'ISO/IEC 27006',
-        'ISO/IEC 27001:2022',
-        'ISMS Auditing',
-        'Risk Assessment',
-        'Compliance Reporting',
-        'Corrective Actions'
-      ],
-      credentialId: 'gwoklqorjt',
-      credentialUrl: 'https://learn.mastermindassurance.com/certificates/gwoklqorjt',
-      imageUrl: '/certificates/iso-27001-lead-auditor.pdf',
-      tags: ['ISO27001', 'LeadAuditor', 'GRC', 'InformationSecurity', 'Compliance', 'Audit']
-    },
-    {
-      id: 6,
+      id: 11,
       title: 'Network Security Practitioner (CNSP)',
       issuer: 'The SecOps Group (Creators of PentestingExams.com)',
       date: 'November 2025',
@@ -145,13 +263,14 @@ const CertificatesPage = () => {
       imageUrl: '/certificates/csnp-secops.pdf',
       tags: ['NetworkSecurity', 'DNS', 'SecOps', 'DefensiveSecurity', 'InfrastructureSecurity']
     },
+    // ── September 2025 ─────────────────────────────────────────────────────
     {
-      id: 7,
+      id: 12,
       title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
       issuer: 'Oracle',
-      date: 'September 08, 2025',
-      expirationDate: 'September 08, 2027',
-      description: 'The Oracle Cloud Infrastructure (OCI) AI Foundations certification introduces learners to the essential concepts of Artificial Intelligence (AI) and Machine Learning (ML), focusing on their practical implementation within Oracle Cloud Infrastructure. This certification validates foundational knowledge in AI/ML concepts, OCI AI services, and cloud-based machine learning workflows. The certification demonstrates proficiency in understanding AI use cases, data preparation for ML models, and implementing AI solutions using Oracle\'s cloud platform.',
+      date: 'September 2025',
+      expirationDate: 'September 2027',
+      description: "The Oracle Cloud Infrastructure (OCI) AI Foundations certification introduces learners to the essential concepts of Artificial Intelligence (AI) and Machine Learning (ML), focusing on their practical implementation within Oracle Cloud Infrastructure. This certification validates foundational knowledge in AI/ML concepts, OCI AI services, and cloud-based machine learning workflows.",
       skills: [
         'Artificial Intelligence Fundamentals',
         'Machine Learning Concepts',
@@ -189,8 +308,9 @@ const CertificatesPage = () => {
         'Foundation for advanced Oracle AI certifications'
       ]
     },
+    // ── August 2025 ────────────────────────────────────────────────────────
     {
-      id: 8,
+      id: 13,
       title: 'Cybersecurity Foundation',
       issuer: 'Palo Alto Networks',
       date: 'August 2025',
@@ -200,8 +320,9 @@ const CertificatesPage = () => {
       credentialUrl: '#',
       imageUrl: '/certificates/palo-alto-foundation.pdf'
     },
+    // ── July 2025 ──────────────────────────────────────────────────────────
     {
-      id: 9,
+      id: 14,
       title: 'Cybersecurity Analyst Job Simulation',
       issuer: 'Forage',
       date: 'July 2025',
@@ -211,8 +332,9 @@ const CertificatesPage = () => {
       credentialUrl: '#',
       imageUrl: '/certificates/forage-analyst.pdf'
     },
+    // ── May 2025 ───────────────────────────────────────────────────────────
     {
-      id: 10,
+      id: 15,
       title: 'Cryptography & Network Security',
       issuer: 'NPTEL',
       date: 'May 2025',
@@ -222,8 +344,9 @@ const CertificatesPage = () => {
       credentialUrl: '#',
       imageUrl: '/certificates/nptel-cryptography.pdf'
     },
+    // ── November 2024 ──────────────────────────────────────────────────────
     {
-      id: 11,
+      id: 16,
       title: 'Diving Deep in Cyber Security',
       issuer: 'Null Vadodara',
       date: 'November 2024',
@@ -233,8 +356,9 @@ const CertificatesPage = () => {
       credentialUrl: '#',
       imageUrl: '/certificates/null-vadodara.pdf'
     },
+    // ── Ongoing ────────────────────────────────────────────────────────────
     {
-      id: 12,
+      id: 17,
       title: 'Cloud Computing',
       issuer: 'EC-Council',
       date: 'Ongoing',
@@ -247,9 +371,9 @@ const CertificatesPage = () => {
   ];
 
   const stats = [
-    { label: 'Certificates Earned', value: '12', icon: Award },
-    { label: 'Skills Mastered', value: '30+', icon: Star },
-    { label: 'Organizations', value: '6', icon: Trophy },
+    { label: 'Certificates Earned', value: '17', icon: Award },
+    { label: 'Skills Mastered', value: '40+', icon: Star },
+    { label: 'Organizations', value: '8', icon: Trophy },
     { label: 'Years Learning', value: '2+', icon: Calendar },
   ];
 
@@ -273,7 +397,7 @@ const CertificatesPage = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="section-title">Certifications & Achievements</h1>
+          <h1 className="section-title">Certifications &amp; Achievements</h1>
           <p className="text-gray-300 font-mono text-lg max-w-3xl mx-auto">
             My journey in cybersecurity through formal certifications and continuous learning
           </p>
@@ -361,11 +485,11 @@ const CertificatesPage = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-neon-green rounded-full mt-2"></div>
-                    <span className="text-gray-300 font-mono text-sm">Completed 12 professional certifications</span>
+                    <span className="text-gray-300 font-mono text-sm">Completed 17 professional certifications</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-neon-blue rounded-full mt-2"></div>
-                    <span className="text-gray-300 font-mono text-sm">Mastered 30+ cybersecurity and AI/ML skills</span>
+                    <span className="text-gray-300 font-mono text-sm">Mastered 40+ cybersecurity and AI/ML skills</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-neon-green rounded-full mt-2"></div>
@@ -398,7 +522,7 @@ const CertificatesPage = () => {
               </div>
               <h3 className="text-lg font-cyber font-bold text-white">CEH</h3>
               <p className="text-gray-400 font-mono text-sm">Certified Ethical Hacker</p>
-              <span className="text-xs text-neon-green font-mono">Q2 2025</span>
+              <span className="text-xs text-neon-green font-mono">Q2 2026</span>
             </div>
             <div className="text-center space-y-3">
               <div className="w-16 h-16 bg-neon-green/10 rounded-full flex items-center justify-center mx-auto">
@@ -406,7 +530,7 @@ const CertificatesPage = () => {
               </div>
               <h3 className="text-lg font-cyber font-bold text-white">OSCP</h3>
               <p className="text-gray-400 font-mono text-sm">Offensive Security Certified Professional</p>
-              <span className="text-xs text-neon-blue font-mono">Q3 2025</span>
+              <span className="text-xs text-neon-blue font-mono">Q3 2026</span>
             </div>
             <div className="text-center space-y-3">
               <div className="w-16 h-16 bg-purple-400/10 rounded-full flex items-center justify-center mx-auto">
@@ -414,7 +538,7 @@ const CertificatesPage = () => {
               </div>
               <h3 className="text-lg font-cyber font-bold text-white">CISSP</h3>
               <p className="text-gray-400 font-mono text-sm">Certified Information Systems Security Professional</p>
-              <span className="text-xs text-purple-400 font-mono">Q4 2025</span>
+              <span className="text-xs text-purple-400 font-mono">Q4 2026</span>
             </div>
           </div>
         </motion.div>

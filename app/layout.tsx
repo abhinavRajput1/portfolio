@@ -65,10 +65,13 @@ export const metadata: Metadata = {
   // Icons and Favicon
   icons: {
     icon: [
-      { url: '/favicon.png', sizes: 'any' },
-      { url: '/favicon.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.png', type: 'image/png', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.png', type: 'image/png', sizes: '192x192' },
+      { url: '/favicon.png', type: 'image/png', sizes: '512x512' },
     ],
+    shortcut: '/favicon.png',
     apple: [
       { url: '/favicon.png', sizes: '180x180', type: 'image/png' }
     ],
@@ -126,6 +129,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#00ffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
