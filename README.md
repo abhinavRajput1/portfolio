@@ -16,7 +16,7 @@
 
 ## 🌟 Live Demo
 
-🌐 Check Out My Portfolio[www.raputabhinav.in]
+🌐 Check Out My Portfolio[www.rajputabhinav.in]
 
 ---
 
