@@ -9,10 +9,10 @@ module.exports = {
     extend: {
       colors: {
         'neon-blue': '#00f5ff',
-        'neon-green': '#39ff14',
-        'cyber-dark': '#0a0a0a',
-        'cyber-gray': '#1a1a1a',
-        'cyber-light': '#2a2a2a',
+        'neon-green': '#a259ff',
+        'cyber-dark': '#050510',
+        'cyber-gray': '#0a0820',
+        'cyber-light': '#0f0c2e',
       },
       fontFamily: {
         'mono': ['JetBrains Mono', 'Courier New', 'monospace'],
@@ -31,8 +31,8 @@ module.exports = {
           '100%': { boxShadow: '0 0 10px #00f5ff, 0 0 20px #00f5ff, 0 0 30px #00f5ff' }
         },
         'pulse-neon': {
-          '0%, 100%': { opacity: 1, textShadow: '0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14' },
-          '50%': { opacity: 0.8, textShadow: '0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14' }
+          '0%, 100%': { opacity: '1', textShadow: '0 0 5px #a259ff, 0 0 10px #a259ff, 0 0 15px #a259ff' },
+          '50%': { opacity: '0.8', textShadow: '0 0 10px #a259ff, 0 0 20px #a259ff, 0 0 30px #a259ff' }
         },
         matrix: {
           '0%': { transform: 'translateY(-100%)' },

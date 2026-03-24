@@ -18,10 +18,29 @@ html, body {
   
   body {
     @apply font-mono;
-    color: #c9f7d2;
-    background-color: #020b05;
-    background-image: linear-gradient(to bottom, #020b05 0%, #07180c 45%, #0b2a14 100%);
+    color: #e2e8f0;
+    background-color: #050510;
+    background-image:
+      /* Neon radial glow blobs for depth */
+      radial-gradient(ellipse 80% 60% at 10% 0%,   rgba(99, 40, 180, 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 20%,  rgba(0, 200, 200, 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 60% at 50% 100%, rgba(30, 60, 180, 0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 80% 80%,  rgba(120, 0, 180, 0.10) 0%, transparent 50%),
+      /* Main diagonal gradient */
+      linear-gradient(
+        135deg,
+        #050510 0%,
+        #0a0820 15%,
+        #0d0b2e 30%,
+        #0a1040 45%,
+        #081530 60%,
+        #060e22 75%,
+        #080616 90%,
+        #050510 100%
+      );
     background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
   }
 
   html {
@@ -41,13 +60,18 @@ html, body {
   }
 
   ::selection {
-    @apply bg-green-400 text-black;
+    background: rgba(99, 102, 241, 0.6);
+    color: #fff;
   }
 }
 
 @layer components {
   .glass-effect {
-    @apply bg-gray-800/40 backdrop-blur-sm border border-gray-500/30;
+    background: rgba(15, 12, 40, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(99, 102, 241, 0.18);
+    box-shadow: 0 4px 32px rgba(67, 24, 180, 0.08), inset 0 1px 0 rgba(255,255,255,0.04);
   }
 
   .neon-glow {
@@ -59,15 +83,65 @@ html, body {
   }
 
   .cyber-button {
-    @apply px-6 py-3 bg-transparent border-2 border-gray-300 text-gray-300 font-cyber font-bold uppercase tracking-wider transition-all duration-300 hover:bg-gray-300 hover:text-black hover:shadow-[0_0_20px_rgba(200,200,200,0.6)];
+    @apply px-6 py-3 font-cyber font-bold uppercase tracking-wider transition-all duration-300;
+    background: transparent;
+    border: 2px solid #00f5ff;
+    color: #00f5ff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cyber-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,245,255,0.12), rgba(162,89,255,0.12));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .cyber-button:hover::before {
+    opacity: 1;
+  }
+
+  .cyber-button:hover {
+    color: #fff;
+    border-color: #00f5ff;
+    box-shadow: 0 0 18px rgba(0,245,255,0.45), 0 0 40px rgba(0,245,255,0.15);
+    transform: translateY(-1px);
   }
 
   .cyber-button-secondary {
-    @apply px-6 py-3 bg-transparent border-2 border-gray-400 text-gray-400 font-cyber font-bold uppercase tracking-wider transition-all duration-300 hover:bg-gray-400 hover:text-black hover:shadow-[0_0_20px_rgba(160,160,160,0.6)];
+    @apply px-6 py-3 font-cyber font-bold uppercase tracking-wider transition-all duration-300;
+    background: transparent;
+    border: 2px solid #a259ff;
+    color: #a259ff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cyber-button-secondary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(162,89,255,0.12), rgba(0,245,255,0.08));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .cyber-button-secondary:hover::before {
+    opacity: 1;
+  }
+
+  .cyber-button-secondary:hover {
+    color: #fff;
+    border-color: #a259ff;
+    box-shadow: 0 0 18px rgba(162,89,255,0.5), 0 0 40px rgba(162,89,255,0.18);
+    transform: translateY(-1px);
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-cyber font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-100 mb-8;
+    @apply text-3xl md:text-4xl font-cyber font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-300 to-cyan-300 mb-8;
   }
 
   .matrix-bg {
@@ -83,11 +157,11 @@ html, body {
   .matrix-column {
     position: absolute;
     top: -100%;
-    color: #00ff41;
+    color: #a259ff;
     font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
     line-height: 20px;
-    opacity: 0.1;
+    opacity: 0.08;
     animation: matrix 20s linear infinite;
   }
 
@@ -100,7 +174,7 @@ html, body {
 
   .terminal-window {
     @apply bg-cyber-dark border border-neon-green/30 rounded-lg p-4 font-mono text-sm;
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    box-shadow: 0 0 20px rgba(162, 89, 255, 0.25);
   }
 
   .terminal-header {
@@ -113,7 +187,7 @@ html, body {
 
   .terminal-dot.red { @apply bg-red-500; }
   .terminal-dot.yellow { @apply bg-yellow-500; }
-  .terminal-dot.green { @apply bg-green-500; }
+  .terminal-dot.green { @apply bg-violet-500; }
 
   .skill-badge {
     @apply inline-block px-4 py-2 bg-cyber-light border border-neon-blue/30 rounded-full text-neon-blue font-mono text-sm transition-all duration-300 hover:border-neon-blue hover:shadow-[0_0_10px_rgba(0,245,255,0.3)];
@@ -157,15 +231,16 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-cyber-gray;
+  background: #0a0820;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neon-blue/50 rounded-full;
+  background: rgba(99, 102, 241, 0.45);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neon-blue/70;
+  background: rgba(99, 102, 241, 0.7);
 }
 
 /* 3D Card Effects */
